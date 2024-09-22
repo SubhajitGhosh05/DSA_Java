@@ -2,10 +2,14 @@ package faang.problems;
 
 public class FirstAndLastPosition {
 	public static void main(String[] args) {
-
+		int	nums[] = {5,7,7,8,8,10};
+		int target = 8;
+		int[] a=searchRange(nums,target);
+		System.out.println("First Occurance::"+a[0]+" & Last Occurance::"+a[1]);
 	}
 
-	public int[] searchRange(int[] nums, int target) {
+
+	public static int[] searchRange(int[] nums, int target) {
 
 		int[] ans = { -1, -1 };
 		// check for first occurrence if target first
@@ -17,7 +21,7 @@ public class FirstAndLastPosition {
 	}
 
 	// this function just returns the index value of target
-	int search(int[] nums, int target, boolean findStartIndex) {
+	static int search(int[] nums, int target, boolean findStartIndex) {
 		int ans = -1;
 		int start = 0;
 		int end = nums.length - 1;
